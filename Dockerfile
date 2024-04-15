@@ -3,7 +3,7 @@ RUN npm i -g pnpm
 
 FROM base AS dependencies
 WORKDIR /usr/src/app
-COPY package.json pnpm-lock.yaml ./
+COPY package.json ./
 RUN pnpm install
 
 FROM base AS build
